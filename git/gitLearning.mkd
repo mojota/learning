@@ -11,7 +11,7 @@
 ![提交流程1](push1.png)
 
 
-总结:
+小结:
 
 1. `git checkout 新分支'
 2. `git add 要提交的目录或文件` .代码当前目录下的所有
@@ -27,7 +27,7 @@
 
 ![提交流程2](push2.png)
 
-总结：
+小结：
 
 1. `git stash`
 2. `git pull`
@@ -41,7 +41,7 @@
 
 ## git 常用操作
 ***
-## 工作区、暂存区、版本库
+#### 工作区、暂存区、版本库
 * 工作区：就是电脑里能看到的目录
 * 暂存区(Stage)
 > `git add ` 就是把要提交的所有修改放到暂存区
@@ -51,6 +51,17 @@
 > `git push origin 分支名`
 
 
+#### 关联本地库与远程库
+两种方式：
+* 从远程库克隆到本地
+> `git clone 远程库地址`
+
+* 从已存在的本地库关联远程库
+> 1. `git init`
+> 1. `git add <file>`
+> 1. `git commit -m "first commit"`
+> 1. `git remote add origin 远程库地址`
+> 1. `git push -u origin master`
 
 
 #### 查看分支当前状态
@@ -122,8 +133,7 @@
 * 推送全部本地标签：`git push origin --tags`
 * 切换到某个标签: `git checkout <tagname>`
 
-
-总结打tag流程：
+小结打tag流程：
 
 1. `git tag <tagname>`
 2. `git push origin <tagname>`
@@ -141,7 +151,7 @@
 
 
 #### 其它
-*  在commit代码或merge分支以前，一定保证当前分支是最新的.
+*  在commit代码或merge分支以前，一定保证当前分支是最新的.如果已经pull过最新代码，在commit本地后又发现有新的提交，则可使用`git reset`撤消commit,重新pull代码再commit.
 * .gitignore文件一定要在项目开始时就创建，否则一但开始版本控制再加入的规则就不起作用了
 
 
