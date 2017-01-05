@@ -120,6 +120,7 @@
 * 创建+切换分支：`git checkout -b <name>`
 * 合并某分支到当前分支：`git merge <name>`
 * 删除分支：`git branch -d <name>`
+* 推关本地分支到远程库： `git push origin <name>`
 
 
 
@@ -152,6 +153,7 @@
 
 #### 其它
 *  在commit代码或merge分支以前，一定保证当前分支是最新的.如果已经pull过最新代码，在commit本地后又发现有新的提交，则可使用`git reset`撤消commit,重新pull代码再commit.
+*  本地分支名称要与远程分支名一致，否则push时会新建一个远程分支。
 * .gitignore文件一定要在项目开始时就创建，否则一但开始版本控制再加入的规则就不起作用了
 
 
