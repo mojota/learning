@@ -147,4 +147,15 @@
 
 
 
+```flow
+newbranch=>start: git checkout -b my_dev
+push=>end: git push
+add=>operation: git add
+commit=>operation: git commit -m 注释
+swichbranch=>operation: git checkout master
+pull=>operation: git pull
+merge=>operation: git merge my_dev
+resolve=>operation: 若有冲突则解决冲突
 
+newbranch->add->commit->swichbranch->pull->merge->resolve->push
+```
