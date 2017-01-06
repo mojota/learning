@@ -1,3 +1,5 @@
+<h1 style="text-align:center">git基本操作</h1>
+
 ## git简介
 
 * 公认的目前世界上最先进的分布式版本控制系统.
@@ -158,3 +160,5 @@
 
 
 
+
+<h4 style="text-align:right">by Mojota</h4>
