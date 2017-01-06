@@ -58,10 +58,10 @@
 
 * 从已存在的本地库关联远程库
 > 1. `git init`
-> 1. `git add <file>`
-> 1. `git commit -m "first commit"`
-> 1. `git remote add origin 远程库地址`
-> 1. `git push -u origin master`
+> 2. `git add <file>`
+> 3. `git commit -m "first commit"`
+> 4. `git remote add origin 远程库地址`
+> 5. `git push -u origin master`
 
 
 #### 查看分支当前状态
@@ -82,7 +82,9 @@
 * `git log --stat`
 * `git log -p`
 
-
+#### 拉取代码
+* `git pull`
+* `git fetch`
 
 
 #### 储藏当前工作现场
