@@ -60,9 +60,9 @@
 
 * 从已存在的本地库关联远程库
 > 1. `git init`
-> 2. `git add <file>`
-> 3. `git commit -m "first commit"`
-> 4. `git remote add origin 远程库地址`
+> 2. `git remote add origin 远程库地址`
+> 3. `git add <file>`
+> 4. `git commit -m "first commit"`
 > 5. `git push -u origin master`
 
 
