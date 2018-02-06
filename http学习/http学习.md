@@ -246,41 +246,50 @@ application/x-www-form-urlencoded   -------
 ```
 请求实例：
 
-// 新建一个URL对象
-URL newUrl = new URL(url);
-// 打开一个HttpURLConnection连接
-HttpURLConnection conn = (HttpURLConnection)newUrl.openConnection();
-// 设置连接超时时间
-conn.setConnectTimeout(10000);
-//设置从主机读取数据超时
-conn.setReadTimeout(10000);
-// 设置请求方法
-conn.setRequestMethod("POST");
-// Post请求必须设置允许输出 默认false
-conn.setDoOutput(true);
-// 配置是否保持连接,
-conn.setRequestProperty("Connection", "keep-alive");
-// 配置请求体的Content-Type
-conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+                try {
+                    // 新建一个URL对象
+                    URL newUrl = new URL(url);
+                    // 打开一个HttpURLConnection连接
+                    HttpURLConnection conn = (HttpURLConnection) newUrl.openConnection();
+                    // 设置连接超时时间
+                    conn.setConnectTimeout(10000);
+                    //设置从主机读取数据超时
+                    conn.setReadTimeout(10000);
+                    // 设置请求方法
+                    conn.setRequestMethod("POST");
+                    // Post请求必须设置允许输出 默认false
+                    conn.setDoOutput(true);
+                    // 配置是否保持连接,
+                    conn.setRequestProperty("Connection", "keep-alive");
+                    // 配置请求体的Content-Type
+                    conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; "
+                            + "charset=UTF-8");
+//                    conn.setRequestProperty("Content-type", "application/octet-stream;
+// charset=UTF-8");
 
+                    // 向服务器写请求数据(body)，如果是上传文件，则此处的请求体为具体文件的字节数组
+                    String data = "username=135700&accountType=1";
+                    OutputStream out = conn.getOutputStream();
+                    out.write(data.getBytes());
+                    out.flush();
+                    out.close();
 
-// 向服务器写请求数据(body)
-String data = "username=135700&accountType=1";
-OutputStream out = conn.getOutputStream();
-out.write(data.getBytes());
-out.flush();
-out.close();
+                    // 判断请求是否成功
+                    if (conn.getResponseCode() == 200) {
+                        // 获取返回的数据
+                        String result = streamToString(conn.getInputStream());
+                        Log.e(TAG, "请求成功，result:" + result);
+                    } else {
+                        Log.e(TAG, "请求失败" + conn.getResponseCode());
+                    }
+                    // 关闭连接
+                    conn.disconnect();
 
-// 判断请求是否成功
-if (conn.getResponseCode() == 200) {
-    // 获取返回的数据
-    String result = streamToString(conn.getInputStream());
-    Log.e(TAG, "请求成功，result:" + result);
-} else {
-    Log.e(TAG, "请求失败" + conn.getResponseCode());
-}
-// 关闭连接
-conn.disconnect();
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
 ```
 
