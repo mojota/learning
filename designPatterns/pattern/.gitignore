@@ -1,0 +1,9 @@
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+.idea/
+
