@@ -2,6 +2,7 @@ package Observer;
 
 
 /**
+ * 实体观察者类3
  * @author jamie
  * @date 18-4-26
  */

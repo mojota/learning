@@ -1,6 +1,7 @@
 package Adapter;
 
 /**
+ * 正常不需要适配的类
  * @author jamie
  * @date 18-5-2
  */

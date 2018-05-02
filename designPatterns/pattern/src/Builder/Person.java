@@ -1,6 +1,7 @@
 package Builder;
 
 /**
+ * 最终要建造的对象
  * @author jamie
  * @date 18-5-2
  */

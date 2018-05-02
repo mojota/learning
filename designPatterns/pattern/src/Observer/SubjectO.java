@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 被观察的类，目标
  * @author jamie
  * @date 18-4-26
  */
-public class TargetO {
+public class SubjectO {
 
     private List<IObserver> mObservers = new ArrayList<IObserver>();
 

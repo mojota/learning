@@ -4,7 +4,7 @@ package Callback;
  * @author jamie
  * @date 18-4-26
  */
-public class TargetC {
+public class SubjectC {
 
     private IObserver mObserver;
 

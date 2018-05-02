@@ -1,6 +1,7 @@
 package Adapter;
 
 /**
+ * 类适配器
  * @author jamie
  * @date 18-5-2
  */

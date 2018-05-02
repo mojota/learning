@@ -1,12 +1,7 @@
-import Adapter.*;
-import Builder.Director;
-import Builder.GreenPersonBuilder;
-import Builder.IPersonBuilder;
-import Builder.RedPersonBuilder;
 import Observer.ObserverImpl1;
 import Observer.ObserverImpl2;
 import Observer.ObserverImpl3;
-import Observer.TargetO;
+import Observer.SubjectO;
 
 public class Main {
 
@@ -14,28 +9,28 @@ public class Main {
         System.out.println("Hello World!");
 
         // 回调
-//        TargetC targetc = new TargetC();
-//        targetc.setObserver(new IObserver() {
+//        SubjectC subjectC = new SubjectC();
+//        subjectC.setObserver(new IObserver() {
 //            @Override
 //            public void onCallback(String methodName) {
 //                System.out.println(methodName);
 //            }
 //        });
-// //        targetc.setObserver(new ObserverImpl());
-//        targetc.move();
+// //        subjectC.setObserver(new ObserverImpl());
+//        subjectC.move();
 
         // 观察者
-        TargetO targetO = new TargetO();
+        SubjectO subjectO = new SubjectO();
         ObserverImpl1 observerImpl1 = new ObserverImpl1();
         ObserverImpl2 observerImpl2 = new ObserverImpl2();
         ObserverImpl3 observerImpl3 = new ObserverImpl3();
-        targetO.registerObserver(observerImpl1);
-        targetO.registerObserver(observerImpl2);
-        targetO.registerObserver(observerImpl3);
-        targetO.move();
+        subjectO.registerObserver(observerImpl1);
+        subjectO.registerObserver(observerImpl2);
+        subjectO.registerObserver(observerImpl3);
+        subjectO.move();
 //         取消观察者1的注册
- //       targetO.unRegisterObserver(observerImpl1);
- //      targetO.move();
+ //       subjectO.unRegisterObserver(observerImpl1);
+ //      subjectO.move();
 
 
         // 适配器

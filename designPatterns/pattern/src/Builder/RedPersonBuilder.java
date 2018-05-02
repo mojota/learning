@@ -1,6 +1,7 @@
 package Builder;
 
 /**
+ * 具体建造类
  * @author jamie
  * @date 18-5-2
  */
