@@ -7,7 +7,7 @@ package Observer;
 public class ConcreteSubjectO extends SubjectO {
 
     public void newMessage() {
-        super.notify("有新消息来了");
+        super.notify("最新资讯来了");
     }
 
 }

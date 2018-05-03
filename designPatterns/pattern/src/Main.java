@@ -1,9 +1,10 @@
+import Builder.*;
 import Observer.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+//        System.out.println("Hello World!");
 
         // 回调
 //        SubjectC subjectC = new SubjectC();
@@ -46,15 +47,17 @@ public class Main {
         // 建造者
 //        Director director = new Director();
 //        IPersonBuilder greenPerson = new GreenPersonBuilder();
-////        greenPerson.getPerson();
 //        director.createPerson(greenPerson);
 //        greenPerson.getPerson();
-//
-////        IPersonBuilder redPerson = new RedPersonBuilder();
-////        redPerson.getPerson();
-////        director.createPerson(redPerson);
-////        redPerson.getPerson();
+//        IPersonBuilder redPerson = new RedPersonBuilder();
+//        director.createPerson(redPerson);
+//        redPerson.getPerson();
 
+//        PersonBuilder builder = new PersonBuilder();
+//        builder.buildHead("蓝色的头").buildBody("蓝色身体").buildLimbs("蓝色四肢").getPerson();
+
+//        PersonBuilder2 builder2 = new PersonBuilder2();
+//        builder2.buildHead("黄色的头").buildBody("黄色的身体").buildLimbs("黄色的四肢").getPerson();
 
     }
 }

@@ -10,6 +10,5 @@ public interface IPersonBuilder {
     void buildHead();
     void buildBody();
     void buildLimbs();
-
     Person getPerson();
 }
