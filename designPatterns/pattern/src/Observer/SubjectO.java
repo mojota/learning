@@ -4,25 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 被观察的类，目标
+ * 抽象被观察者
+ *
  * @author jamie
  * @date 18-4-26
  */
-public class SubjectO {
+public abstract class SubjectO {
 
+    // 观察者集合
     private List<IObserver> mObservers = new ArrayList<IObserver>();
 
+    // 注册
     public void registerObserver(IObserver observer) {
         mObservers.add(observer);
     }
 
+    // 注销
     public void unRegisterObserver(IObserver observer) {
         mObservers.remove(observer);
     }
 
-    public void move() {
+    // 通知观察者们
+    public void notify(String action) {
         for (IObserver mObserver : mObservers) {
-            mObserver.onCallback("move");
+            mObserver.onCallback(action);
         }
     }
 }

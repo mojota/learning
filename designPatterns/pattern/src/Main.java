@@ -1,7 +1,4 @@
-import Observer.ObserverImpl1;
-import Observer.ObserverImpl2;
-import Observer.ObserverImpl3;
-import Observer.SubjectO;
+import Observer.*;
 
 public class Main {
 
@@ -20,17 +17,17 @@ public class Main {
 //        subjectC.move();
 
         // 观察者
-        SubjectO subjectO = new SubjectO();
+        ConcreteSubjectO subjectO = new ConcreteSubjectO();
         ObserverImpl1 observerImpl1 = new ObserverImpl1();
         ObserverImpl2 observerImpl2 = new ObserverImpl2();
         ObserverImpl3 observerImpl3 = new ObserverImpl3();
         subjectO.registerObserver(observerImpl1);
         subjectO.registerObserver(observerImpl2);
         subjectO.registerObserver(observerImpl3);
-        subjectO.move();
+        subjectO.newMessage();
 //         取消观察者1的注册
  //       subjectO.unRegisterObserver(observerImpl1);
- //      subjectO.move();
+ //      subjectO.newMessage();
 
 
         // 适配器
