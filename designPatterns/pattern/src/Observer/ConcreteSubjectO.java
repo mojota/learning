@@ -1,6 +1,7 @@
 package Observer;
 
 /**
+ * 具体被观察者
  * @author jamie
  * @date 18-5-3
  */

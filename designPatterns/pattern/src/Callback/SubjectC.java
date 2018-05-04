@@ -6,15 +6,15 @@ package Callback;
  */
 public class SubjectC {
 
-    private IObserver mObserver;
+    private IObserverC mObserver;
 
-    public void setObserver(IObserver observer) {
+    public void setObserver(IObserverC observer) {
         mObserver = observer;
     }
 
-    public void move() {
+    public void newMessage() {
         if (mObserver != null) {
-            mObserver.onCallback("move");
+            mObserver.onCallback("有新数据来了");
         }
     }
 }

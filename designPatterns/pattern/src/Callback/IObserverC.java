@@ -1,10 +1,9 @@
-package Observer;
+package Callback;
 
 /**
- * 抽象观察者
  * @author jamie
  * @date 18-4-26
  */
-public interface IObserver {
+public interface IObserverC {
     void onCallback(String action);
 }

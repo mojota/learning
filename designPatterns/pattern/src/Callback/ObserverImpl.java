@@ -4,9 +4,9 @@ package Callback;
  * @author jamie
  * @date 18-4-26
  */
-public class ObserverImpl implements IObserver{
+public class ObserverImpl implements IObserverC {
     @Override
-    public void onCallback(String methodName) {
-        System.out.println(methodName);
+    public void onCallback(String action) {
+        System.out.println(action);
     }
 }

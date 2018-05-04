@@ -1,4 +1,9 @@
+import Adapter.AdapterTargetO;
+import Adapter.Target;
 import Builder.*;
+import Callback.IObserverC;
+import Callback.ObserverImpl;
+import Callback.SubjectC;
 import Observer.*;
 
 public class Main {
@@ -8,16 +13,16 @@ public class Main {
 
         // 回调
 //        SubjectC subjectC = new SubjectC();
-//        subjectC.setObserver(new IObserver() {
+//        subjectC.setObserver(new IObserverC() {
 //            @Override
-//            public void onCallback(String methodName) {
-//                System.out.println(methodName);
+//            public void onCallback(String action) {
+//                System.out.println(action);
 //            }
 //        });
-// //        subjectC.setObserver(new ObserverImpl());
-//        subjectC.move();
+////         subjectC.setObserver(new ObserverImpl());
+//        subjectC.newMessage();
 
-        // 观察者
+        // 观察者模式
         ConcreteSubjectO subjectO = new ConcreteSubjectO();
         ObserverImpl1 observerImpl1 = new ObserverImpl1();
         ObserverImpl2 observerImpl2 = new ObserverImpl2();
@@ -31,7 +36,7 @@ public class Main {
  //      subjectO.newMessage();
 
 
-        // 适配器
+        // 适配器模式
 //        Target normalTarget = new NormalTarget();
 //        normalTarget.request();
 //        // 对象适配器
@@ -44,7 +49,7 @@ public class Main {
 ////        Target adapterC = new AdapterTargetC();
 ////        adapterC.request();
 
-        // 建造者
+        // 建造者模式
 //        Director director = new Director();
 //        IPersonBuilder greenPerson = new GreenPersonBuilder();
 //        director.createPerson(greenPerson);
