@@ -4,7 +4,12 @@ import Builder.*;
 import Callback.IObserverC;
 import Callback.ObserverImpl;
 import Callback.SubjectC;
+import Facade.Facade;
+import Facade.SubSystem1;
+import Facade.SubSystem2;
+import Facade.SubSystem3;
 import Observer.*;
+import Proxy.Proxy;
 
 public class Main {
 
@@ -23,14 +28,14 @@ public class Main {
 //        subjectC.newMessage();
 
         // 观察者模式
-        ConcreteSubjectO subjectO = new ConcreteSubjectO();
-        ObserverImpl1 observerImpl1 = new ObserverImpl1();
-        ObserverImpl2 observerImpl2 = new ObserverImpl2();
-        ObserverImpl3 observerImpl3 = new ObserverImpl3();
-        subjectO.registerObserver(observerImpl1);
-        subjectO.registerObserver(observerImpl2);
-        subjectO.registerObserver(observerImpl3);
-        subjectO.newMessage();
+//        ConcreteSubjectO subjectO = new ConcreteSubjectO();
+//        ObserverImpl1 observerImpl1 = new ObserverImpl1();
+//        ObserverImpl2 observerImpl2 = new ObserverImpl2();
+//        ObserverImpl3 observerImpl3 = new ObserverImpl3();
+//        subjectO.registerObserver(observerImpl1);
+//        subjectO.registerObserver(observerImpl2);
+//        subjectO.registerObserver(observerImpl3);
+//        subjectO.newMessage();
 //         取消观察者1的注册
  //       subjectO.unRegisterObserver(observerImpl1);
  //      subjectO.newMessage();
@@ -63,6 +68,22 @@ public class Main {
 
 //        PersonBuilder2 builder2 = new PersonBuilder2();
 //        builder2.buildHead("黄色的头").buildBody("黄色的身体").buildLimbs("黄色的四肢").getPerson();
+
+        // 代理模式
+//        Proxy proxy = new Proxy();
+//        proxy.doSomething1();
+//        proxy.doSomething2();
+
+        // 外观模式
+//        SubSystem1 system1 = new SubSystem1();
+//        SubSystem2 system2 = new SubSystem2();
+//        SubSystem3 system3 = new SubSystem3();
+//        system1.doSomething();
+//        system2.doSomething();
+//        system3.doSomething();
+
+        Facade facade = new Facade();
+        facade.doManyThings();
 
     }
 }
