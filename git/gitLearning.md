@@ -121,8 +121,10 @@
 * 切换分支：`git checkout <name>`
 * 创建+切换分支：`git checkout -b <name>`
 * 合并某分支到当前分支：`git merge <name>`
-* 删除分支：`git branch -d <name>`
-* 推关本地分支到远程库： `git push origin <name>`
+* 删除本地分支：`git branch -d <name>`
+* 推送本地分支到远程库： `git push origin <name>`
+* 强制推送本地分支到远程库：`git push -f origin <name>`(有可能冲掉别人的代码，慎用，没事别用)
+* 删除远程服务器上的分支： `git push origin -d <name>`
 
 
 
