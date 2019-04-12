@@ -7,9 +7,35 @@
     <servlet>
         <servlet-name>hello</servlet-name>
         <servlet-class>servlet.HelloWorld</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>hello</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <filter>
+        <filter-name>filter1</filter-name>
+        <filter-class>servlet.Filter1</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filter1</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>filter2</filter-name>
+        <filter-class>servlet.Filter2</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filter2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>servlet.Listener1</listener-class>
+    </listener>
+    <listener>
+        <listener-class>servlet.Listener2</listener-class>
+    </listener>
 </web-app>

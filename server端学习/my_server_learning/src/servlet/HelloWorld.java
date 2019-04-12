@@ -18,7 +18,7 @@ public class HelloWorld extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-        System.out.println("Servlet正在初始化,config: " + config.getServletName());
+        System.out.println("Servlet正在初始化init,servletName: " + config.getServletName());
     }
 
     @Override
