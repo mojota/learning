@@ -11,7 +11,7 @@
     <title>Hello Struts2 title</title>
   </head>
   Hello Struts2
-  <form action="action1.action" method="post">
+  <form action="strutsAction1" method="post">
 
     <input name="name" type="text">
     <input type="submit" value="提交">

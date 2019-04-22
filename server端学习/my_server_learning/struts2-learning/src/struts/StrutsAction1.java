@@ -29,4 +29,10 @@ public class StrutsAction1 extends ActionSupport {
         request.setAttribute("name",name);
         return SUCCESS;
     }
+
+    public String jump() throws Exception {
+        System.out.println("jump跳来的，name为："+name);
+        request.setAttribute("name","jump跳来的，name为："+name);
+        return SUCCESS;
+    }
 }
