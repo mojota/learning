@@ -1,10 +1,9 @@
-package struts;
+package com.mojota;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.HttpServletRequest;
-
 
 /**
  * @author jamie
@@ -31,9 +30,4 @@ public class StrutsAction1 extends ActionSupport {
         return SUCCESS;
     }
 
-    public String jump() throws Exception {
-        System.out.println("jump跳来的，name为："+name);
-        request.setAttribute("name","jump跳来的，name为："+name);
-        return SUCCESS;
-    }
 }

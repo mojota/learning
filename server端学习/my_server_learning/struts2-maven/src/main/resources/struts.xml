@@ -5,9 +5,8 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-    <!--<constant name="struts.enable.DynamicMethodInvocation" value="true" />-->
-    <package name="struts" extends="struts-default">
-        <action name="strutsAction1" class="struts.StrutsAction1" method="jump">
+    <package name="struts" extends="struts-default">  <!--namespace="/test"-->
+        <action name="strutsAction1" class="com.mojota.StrutsAction1">
             <result name="success">/struts2.jsp</result>
         </action>
     </package>
